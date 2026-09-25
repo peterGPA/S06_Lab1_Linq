@@ -101,7 +101,11 @@ namespace LinqEtSeedEF.Controllers
             // TODO: Calculer la valeur totale des commandes du client [nomClient] avec boucle et Linq
             
             // Linq: Utilisez Where et 2 fois Sum
-            var listeLinq = _context.Commande.ToList();
+            //var listeLinq = _context.Commande.ToList();
+
+            //decimal totalLinq = listeLinq
+            //    .Where(c => c.Client.Nom == nomClient)
+            //    .Sum(c => c.Restaurant.Sum(l => l.Prix * l.Quantite));
             // Attention: c'est plus facile si vous faites un ToList() et faites le linq sur la liste et non pas le DbSet
             // on en parlera au prochain cours
             // Faites votre requête Linq sur listeLinq
